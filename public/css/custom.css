@@ -1,0 +1,13 @@
+body {
+  color: #fff;
+  background-color: #000;
+}
+
+hr {
+  border-top: 3px solid #ebebeb;
+  border-bottom: 3px solid #6e6e6e;
+}
+
+.ugly-blue-border {
+  border: 4px solid #00f;
+}
