@@ -7,17 +7,13 @@
     "test": "test"
   },
   "dependencies": {
-    "colors": "~0.6.0-1",
-    "ecstatic": "~0.1.6",
-    "union": "~0.1.8",
-    "http-server": "~0.5.1",
-    "optimist": "~0.2.8"
+    "http-server": "~0.5.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/homepage"
   },
-  "repository": "",
   "author": "Joshua Holbrook",
   "license": "MIT"
 }
