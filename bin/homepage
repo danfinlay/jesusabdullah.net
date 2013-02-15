@@ -1,9 +1,0 @@
-#!/usr/bin/env node
-
-var httpServer = require('http-server');
-
-var server = httpServer.createServer({
-  root: './public',
-  autoIndex: true
-});
-server.listen(8080);

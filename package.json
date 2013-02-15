@@ -7,12 +7,11 @@
     "test": "test"
   },
   "dependencies": {
-    "http-server": "~0.5.1"
+    "ecstatic": "~0.4.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/homepage"
+    "test": "echo \"Brohonestly I think you mean 'npm start'?\" && exit 1",
+    "start": "ecstatic ./public --autoIndex --port 8080"
   },
   "author": "Joshua Holbrook",
   "license": "MIT"
