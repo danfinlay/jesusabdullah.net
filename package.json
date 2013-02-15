@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Brohonestly I think you mean 'npm start'?\" && exit 1",
-    "start": "ecstatic ./public --autoIndex --port 8080"
+    "start": "ecstatic ./public --autoIndex --port 10004"
   },
   "author": "Joshua Holbrook",
   "license": "MIT"
