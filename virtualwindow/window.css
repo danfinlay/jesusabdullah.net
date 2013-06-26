@@ -1,0 +1,24 @@
+body {
+    background-image: url('wall.jpg');
+}
+
+div#porthole {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+div#credits {
+    font-size: 10pt;
+    font-family: sans-serif;
+    color: #000000;
+}

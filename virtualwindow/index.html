@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Virtual Window</title>
+    <link rel="stylesheet" href="window.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        // Loads up a new image tag, uses a random number to attempt to force reloads
+        // Not sure if actually works.
+        setInterval(function() {
+            var webcam = $("<img>");
+            webcam.attr('src', 'http://climatecam.gi.alaska.edu/axis-cgi/jpg/image.cgi?resolution=704x480&'+Math.random())
+                  .attr('id', 'webcam');
+            var frame = $("<img>");
+            frame.attr('src', 'frame.png')
+                 .attr('id', 'frame');
+            webcam.load(function() {
+                $("#webcam").remove();
+                $('#frame').remove();
+                $("#porthole").append(webcam);
+                $("#porthole").append(frame);
+            });
+        }, 1000);
+
+        $( function () {
+            var width = $(window).width();
+            var height = $(window).height();
+            //hard-coded :/
+            var aspect = 704/480;
+            function portholeSize () {
+                $('#porthole').height(width/height > aspect
+                                      ? 0.95*$(window).height() 
+                                      : 0.95*$(window).width()/aspect );
+                $('#porthole').width(width/height > aspect 
+                                     ? 0.95*$(window).height()*aspect
+                                     : 0.95*$(window).width() );
+            }
+            portholeSize();
+            $(window).resize(portholeSize);
+        });
+    </script>
+</head>
+<body>
+    <div id=porthole>
+        <img id='webcam' name='webcam' src="http://climatecam.gi.alaska.edu/cgi-bin/jpg/image.cgi?resolution=704x480">
+        <img id=frame src="frame.png">
+
+    </div>
+    <div id=credits>
+        <a href="http://climate.gi.alaska.edu/webcam/large_meta.html">Image thanks to these guys.</a>
+    </div>
+
+</body>
+</html>
