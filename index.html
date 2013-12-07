@@ -7,8 +7,22 @@
     <meta name="author" content="Joshua Holbrook">
     <meta name="description" content="The jesusabdullah.net landing page.">
     <link rel="icon" type="image/png" href="/favicon.png"/>
-    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        var angle = 0,
+            props = '-moz-transform -webkit-transform -o-transform -ms-transform'.split(' '),
+            $rotaaate = $('.rotaaate');
+        setInterval(function () {
+          angle += 10;
+          if (angle >= 360) angle -= 360;
+          props.forEach(function (p) {
+            $rotaaate.css(p, 'rotate(' + angle + 'deg)');
+          });
+        }, 100);
+      });
+    </script>
   </head>
   <body>
     <div class="container">
@@ -67,31 +81,41 @@
       <div class="row">
         <div class="span12">
           <img src="/img/alaska.gif">
-          <p>
-            I was born and raised in Alaska. In the last two years I have also lived in Oakland, CA and Goa, India!
-            Here is a video about Oakland:
-          </p>
-          <p style="text-align: center;">
-            <iframe width="425" height="350" src="http://www.youtube.com/embed/CzkoeyhAAdk?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-          </p>
-
-          <h1>This is a picture of a sunset in Goa:</h1>
-          <a href="http://www.flickr.com/photos/jesusabdullah/8449501495"><img src="http://farm9.staticflickr.com/8378/8449501495_52a401a1f3_b.jpg"></a>
-          <h1>ALSO A MAP:</h1>
         </div>
       </div>
       <div class="row">
-        <div class="span12" style="text-align: center;">
-          <iframe width="800" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=fairbanks+ak&amp;ie=UTF8&amp;hq=&amp;hnear=Fairbanks,+Fairbanks+North+Star,+Alaska&amp;ll=64.837778,-147.716389&amp;spn=0.200277,0.835648&amp;t=h&amp;z=11&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q=fairbanks+ak&amp;ie=UTF8&amp;hq=&amp;hnear=Fairbanks,+Fairbanks+North+Star,+Alaska&amp;ll=64.837778,-147.716389&amp;spn=0.200277,0.835648&amp;t=h&amp;z=11&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        <div class="span12"> 
+          <p>
+            I was born and raised in Alaska. I've moved a lot the last few years though! I was in Oakland, CA for 18 months, and Goa, India for 3 months. Here is a video about Oakand and a picture of a sunset in Goa:
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span6">
+          <iframe width="425" height="350" src="http://www.youtube.com/embed/CzkoeyhAAdk?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="span6">
+          <a href="http://www.flickr.com/photos/jesusabdullah/8449501495"><img class="ugly-blue-border" width=425 src="http://farm9.staticflickr.com/8378/8449501495_52a401a1f3_b.jpg"></a>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="span3">
+          <img src="img/byu.gif" width=200px; class="rotaaate ugly-blue-border">
+        </div>
+        <div class="span9">
+          <h1>NOW I'm in SALT LAKE CITY! <small>(that might change tho stay tuned)</small></h1>
+          <p>SLC is pretty sweet. It has mountains, snow and ski bums! What more could you want?</p>
+        </div>
       </div>
       <div class="row">
         <div class="span12">
           <h2>LINKS TO MORE THINGS:</h1>
           <ul>
             <li>I used to work for <a href="http://nodejitsu.com">these guys</a></li>
-            <li>I now hack on <a href="https://github.com/bigcompany/big">the Big framework</a></li>
-            <li><a href="http://jesusabdullah.net/virtualwindow">The <strong>original</strong> virtual window app!!</a></li>
-            <li><a href="http://jesusabdullah.net/catmap">Arnold's Cat Map</a></li>
+            <li>I made <strong>television magic</strong> at <a href="http://i.tv">i.TV</a> for like 3 months</li>
+            <li><a href="virtualwindow">The <strong>original</strong> virtual window app!!</a></li>
+            <li><a href="catmap">Arnold's Cat Map</a></li>
+            <li><a href="startup-name-generator/">STARTUP NAME GENERATOR</a></li>
             <li><a href="https://github.com/jesusabdullah/resume">My Resume</a></li>
             <li><a href="https://github.com/jesusabdullah/node-ecstatic">My most loved library</a></li>
             <li><a href="https://github.com/jesusabdullah/hoarders">My most hated library</a></li>
