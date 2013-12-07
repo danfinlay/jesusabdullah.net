@@ -1,0 +1,29 @@
+body {
+  background-color: #ebebeb;
+}
+
+#main {
+  text-align: center;
+}
+
+footer {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.title {
+  font-size: 36pt;
+  color: #08d;
+  font-family: monospace;
+}
+
+.intro {
+  font-size: 24pt;
+  color: #f90;
+}
+
+#startup-name {
+  font-size: 72pt;
+  color: #000;
+  text-shadow: 0 0 40px #ff0;
+}
