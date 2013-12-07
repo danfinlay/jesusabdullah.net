@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>startup name generator</title>
+    <meta name="author" content="Joshua Holbrook">
+    <meta name="description" content="startup name generator">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <script type="text/javascript">
+      window.onload = function () {
+        var prefixes = [
+          'Cloud',
+          'App',
+          'Stream',
+          'Giga',
+          'Neo',
+          'My',
+          'Your',
+          'Net',
+          'Go',
+          'Buzz',
+          'Node',
+          'Bridge',
+          'Red',
+          'Blue',
+          'Green',
+          'Micro',
+          'Socket',
+          'Feed'
+        ]
+
+        var suffixes = [
+          'Cloud',
+          'App',
+          'Beam',
+          'Punch',
+          'Stream',
+          'Node',
+          'Buzz',
+          'Panel',
+          'Above',
+          'Feed',
+          'Sense',
+          'Genius',
+          'Host',
+          'Socket'
+        ];
+
+        var postscripts = [
+          '', '', '', '', '', // Easy/stupid way to only get postscripts sometimes
+          '.io',
+          'ify',
+          '.me',
+          '.ly'
+        ];
+
+        function rando(xs) {
+          return xs[Math.floor(xs.length * Math.random())];
+        }
+
+        document.querySelector('#startup-name').innerHTML = rando(prefixes) + rando(suffixes) + rando(postscripts);
+      };
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2>STARTUP NAME GENERATOR</h2>
+      <h3>Refresh for a more different startup name</h3>
+      <h1 id="startup-name">[one sec...]</h1>
+    </div>
+    <footer>
+      <span style="color: #f00">&lt;3</span> Joshua Holbrook 2013.
+    </footer>
+  </body>
+</html>
+
